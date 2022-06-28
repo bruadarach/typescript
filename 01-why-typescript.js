@@ -30,8 +30,15 @@
 
 
 /* 자바스크립트 코드로 weird part 확인 */
+console.log([1,2,3] + false)  // "1,2,3false"
+
+function devide(a, b) {
+    return a / b;
+}
+devide('hello world!') // NaN //=> 2개의 인자를 받지 않아도, 숫자가 아니어도 에러가 발생안됨.
+
 function add(num1, num2) {
-    console.log(num1+num2);
+    console.log(num1+num2)
 }
 
 add(); // NaN //=> undefined + undefined = NaN
