@@ -10,7 +10,7 @@ var isAdumt = true;
 var result = true;
 // array
 var a = [1, 2, 3];
-var b = [1, 2, 3];
+var b = [1, 2, 3]; 
 var week1 = ['mon', 'tue', 'wed'];
 var week2 = ['thur', 'Fri', 'Sat', 'Sun'];
 //week1.push(2) // 문자열 배열에 숫자 추가하면, 에러 발생
@@ -25,6 +25,8 @@ var tuple;
 tuple = ['string', 1];
 var sujeong = ['suji', 25];
 tuple[0].toLowerCase(); // 문자열이므로 사용 가능
+
+const player: readonly [string, number, boolean] = ["suji", 25, true];
 //tuple[1].toLowerCase() //Property 'toLowerCase' does not exist on type 'number'.ts(2339)
 // void, naver
 // void: 함수에서 아무 것도 반환하지 않을 때 사용
@@ -85,3 +87,14 @@ myOs = Os.Window;
 // null, undefined
 var c = null;
 var d = undefined;
+
+// unknown
+let a:unknown;
+
+if (typeof a === 'number') {
+    let b = a + 1 ;
+}
+
+if (typeof a === 'string') {
+    let b = a.toUpperCase();
+}

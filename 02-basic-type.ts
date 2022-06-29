@@ -7,8 +7,10 @@ let car:string = 'bmw';
 let age:number = 30;
 
 
-// string or number
-let myname:string | number  = 'sujeong'
+// string or number => "Union Type"
+/* 문자 or 숫자 들어올 수 있는 변수는 어떻게 만듭니까? */
+// 일단, 가능한 여러 타입 중, 한 가지 타입의 값이 변수에 할당되면, 다른 타입은 할당 불가
+let unionVariable:string | number  = 'sujeong'
 
 
 // boolean
@@ -30,6 +32,7 @@ let week2:Array<string> = ['thur', 'Fri', 'Sat', 'Sun']
 
 let whichlist:string[] | number[]  = [1,2,3]
 
+let unionList:(number | string)[] = [1,'2',3]; // number or string possible!
 
 // object
 let member:{name : string} = {name: 'suji'} // === let member = { name: 'suji' } in JS
@@ -44,6 +47,7 @@ type Dog = {
 }
 let Lucky:Dog = { breed: "Poodle", age: '7'}
 
+let unionObject:{ a: string | number} = {a : 123}
 
 // tuple : 배열과 비슷한 모양인데, 인덱스별로 타입이 다를 때 사용 가능
 let tuple:[string, number];
@@ -73,7 +77,7 @@ function infLoop():never {
     while(true) {
         // do something..
     }
-}
+}  
 
 
 // enum: 비슷한 값들끼리 묶어줌. enum에 수동으로 값을 주지 않으면, 자동으로 0부터 1씩 증가하면서 할당됨 
