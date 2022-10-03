@@ -25,3 +25,12 @@ let list2: Array<number> = [1, 2, 3];
 
 /* Mixed type - tuple */
 let person1: [string, number] = ["Chris", 22];
+
+/* Enum */
+enum Color {
+  Red,
+  Green,
+  Blue,
+}
+let c: Color = Color.Green;
+console.log(c); // 1
